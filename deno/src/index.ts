@@ -55,6 +55,10 @@ export * from "./drawables/drawable-rectangle.ts";
 
 export * from "./drawables/drawable-round-rectangle.ts";
 
+export * from "./drawables/drawable-text-interline-spacing.ts";
+
+export * from "./drawables/drawable-text-kerning.ts";
+
 export * from "./drawables/drawable-text.ts";
 
 export * from "./drawables/drawable.ts";
@@ -80,6 +84,10 @@ export * from "./gravity.ts";
 export * from "./image-magick.ts";
 
 export * from "./interlace.ts";
+
+export * from "./log-event-types.ts";
+
+export * from "./log-event.ts";
 
 export * from "./magick-color.ts";
 
@@ -110,6 +118,8 @@ export * from "./paint-method.ts";
 export * from "./percentage.ts";
 
 export * from "./pixel-channel.ts";
+
+export * from "./pixel-intensity-method.ts";
 
 export * from "./pixel-interpolate-method.ts";
 

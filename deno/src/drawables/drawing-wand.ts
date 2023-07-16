@@ -36,6 +36,8 @@ export interface IDrawingWand extends IDisposable {
     cornerHeight: number,
   ): void;
   text(x: number, y: number, value: string): void;
+  textInterlineSpacing(value: number): void;
+  textKerning(value: number): void;
 }
 
 export class DrawingWand extends NativeInstance implements IDrawingWand {
@@ -170,6 +172,26 @@ export class DrawingWand extends NativeInstance implements IDrawingWand {
           exception,
         );
       });
+    });
+  }
+
+  textInterlineSpacing(value: number): void {
+    Exception.usePointer((exception) => {
+      ImageMagick._api._DrawingWand_TextInterlineSpacing(
+        this._instance,
+        value,
+        exception,
+      );
+    });
+  }
+
+  textKerning(value: number): void {
+    Exception.usePointer((exception) => {
+      ImageMagick._api._DrawingWand_TextKerning(
+        this._instance,
+        value,
+        exception,
+      );
     });
   }
 
